@@ -1,5 +1,9 @@
 # JSX Props & HTML Attributes Navigation VSCode Extension
 
+![moveRight](https://github.com/Diablow/jsx-props-navigation/blob/master/moveRight.gif?raw=true)
+
+![addLeft](https://github.com/Diablow/jsx-props-navigation/blob/master/addLeft.gif?raw=true)
+
 ## Features
 
 Works with JSX and HTML.
