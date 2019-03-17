@@ -9,20 +9,33 @@ const whitespace = /\s/;
 function activate(context) {
 
 
-	let cursorRight = vscode.commands.registerCommand('jsxPropsNavigation.cursorRight', () => {
+	let moveRight = vscode.commands.registerCommand('jsxPropsNavigation.moveRight', () => {
 		const editor = vscode.window.activeTextEditor;
 		const position = editor.selection.active;
 		try {
 			const next = findNextProp(editor.document, position);
-			editor.selection = new vscode.Selection(next, next);
+			const newSelection = new vscode.Selection(next, next);
+			editor.selection = newSelection;
 			editor.revealRange(editor.selection, vscode.TextEditorRevealType.InCenterIfOutsideViewport);
 		} catch (error) {
 			console.log(error);
 		}
-
 	});
 
-	let cursorLeft = vscode.commands.registerCommand('jsxPropsNavigation.cursorLeft', () => {
+	let addRight = vscode.commands.registerCommand('jsxPropsNavigation.addRight', () => {
+		const editor = vscode.window.activeTextEditor;
+		const position = editor.selections[editor.selections.length - 1].active;
+		try {
+			const next = findNextProp(editor.document, position);
+			const newSelection = new vscode.Selection(next, next);
+			editor.selections = [...editor.selections, newSelection];
+			editor.revealRange(editor.selections[editor.selections.length-1], vscode.TextEditorRevealType.InCenterIfOutsideViewport);
+		} catch (error) {
+			console.log(error);
+		}
+	});
+
+	let moveLeft = vscode.commands.registerCommand('jsxPropsNavigation.moveLeft', () => {
 		const editor = vscode.window.activeTextEditor;
 		const position = editor.selection.active;
 		try {
@@ -34,7 +47,20 @@ function activate(context) {
 		}
 	});
 
-	context.subscriptions.push(cursorRight, cursorLeft);
+	let addLeft = vscode.commands.registerCommand('jsxPropsNavigation.addLeft', () => {
+		const editor = vscode.window.activeTextEditor;
+		const position = editor.selections[editor.selections.length - 1].active;
+		try {
+			const prev = findPrevProp(editor.document, position);
+			const newSelection = new vscode.Selection(prev, prev);
+			editor.selections = [...editor.selections, newSelection];
+			editor.revealRange(editor.selections[editor.selections.length - 1], vscode.TextEditorRevealType.InCenterIfOutsideViewport);
+		} catch (error) {
+			console.log(error);
+		}
+	});
+
+	context.subscriptions.push(moveRight, moveLeft, addRight, addLeft);
 }
 exports.activate = activate;
 

@@ -1,8 +1,13 @@
 {
 	"name": "jsx-props-navigation",
+	"author": {
+		"name": "Luis Silva",
+		"email": "luis.silva@medigranja.com"
+	},
+	"publisher": "diablow",
 	"displayName": "jsx.props.navigation",
-	"description": "TBD",
-	"version": "0.0.1",
+	"description": "Easy Props/attributes navigation",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.32.0"
 	},
@@ -10,25 +15,34 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:jsxPropsNavigation.helloWorld",
-		"onCommand:jsxPropsNavigation.cursorRight",
-		"onCommand:jsxPropsNavigation.cursorLeft"
+		"onCommand:jsxPropsNavigation.moveRight",
+		"onCommand:jsxPropsNavigation.addRight",
+		"onCommand:jsxPropsNavigation.moveLeft",
+		"onCommand:jsxPropsNavigation.addLeft"
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"commands": [{
-			"command": "jsxPropsNavigation.helloWorld",
-			"title": "Hello World"
-		}],
 		"keybindings":[
 			{
-				"command": "jsxPropsNavigation.cursorRight",
+				"command": "jsxPropsNavigation.moveRight",
+				"key": "alt+win+]",
+				"mac": "alt+cmd+]",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "jsxPropsNavigation.addRight",
 				"key": "ctrl+alt+win+]",
 				"mac": "ctrl+alt+cmd+]",
 				"when": "editorTextFocus"
 			},
 			{
-				"command": "jsxPropsNavigation.cursorLeft",
+				"command": "jsxPropsNavigation.moveLeft",
+				"key": "alt+win+[",
+				"mac": "alt+cmd+[",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "jsxPropsNavigation.addLeft",
 				"key": "ctrl+alt+win+[",
 				"mac": "ctrl+alt+cmd+[",
 				"when": "editorTextFocus"
