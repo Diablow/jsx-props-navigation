@@ -26,7 +26,7 @@
 	"bugs": {
 		"email": "luis.silva@mediagranja.com"
 	},
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"engines": {
 		"vscode": "^1.32.0"
 	},
@@ -41,7 +41,7 @@
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"keybindings":[
+		"keybindings": [
 			{
 				"command": "jsxPropsNavigation.moveRight",
 				"key": "alt+win+]",
