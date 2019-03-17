@@ -30,6 +30,10 @@ jsxPropsNavigation.moveRight -> Go to next prop/attribute
 ⌨️ Ctrl + Alt + Win/Cmd + ]\
 jsxPropsNavigation.addRight -> Add cursor at next prop/attribute
 
+## Known issues
+
+- Boolean props or attributes missing a value are ignored.
+
 ## Release Notes
 
 Hope you like it.
