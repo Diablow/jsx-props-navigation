@@ -14,16 +14,16 @@ This extension might use keyboard shortcuts already assigned to other extensions
 
 ## Available Commands
 
-⌨️ Alt + Win/Cmd + [
+⌨️ Alt + Win/Cmd + [\
 jsxPropsNavigation.moveLeft -> Go to previous prop/attribute
 
-⌨️ Ctrl + Alt + Win/Cmd + ]
+⌨️ Ctrl + Alt + Win/Cmd + ]\
 jsxPropsNavigation.addLeft -> Add cursor at previous prop/attribute
 
-⌨️ Alt + Win/Cmd + ]
+⌨️ Alt + Win/Cmd + ]\
 jsxPropsNavigation.moveRight -> Go to next prop/attribute
 
-⌨️ Ctrl + Alt + Win/Cmd + ]
+⌨️ Ctrl + Alt + Win/Cmd + ]\
 jsxPropsNavigation.addRight -> Add cursor at next prop/attribute
 
 ## Release Notes
