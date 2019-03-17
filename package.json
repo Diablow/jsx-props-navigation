@@ -5,8 +5,27 @@
 		"email": "luis.silva@medigranja.com"
 	},
 	"publisher": "diablow",
-	"displayName": "jsx.props.navigation",
-	"description": "Easy Props/attributes navigation",
+	"displayName": "JSX Props & HTML Attributes Navigation",
+	"description": "Navigate JSX Props or HTML Attributes with keyboard shortcuts",
+	"keywords": [
+		"keyboard",
+		"shortcut",
+		"jsx",
+		"props",
+		"attrs",
+		"attributes",
+		"react",
+		"html",
+		"navigation",
+		"jump"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Diablow/jsx-props-navigation.git"
+	},
+	"bugs": {
+		"email": "luis.silva@mediagranja.com"
+	},
 	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.32.0"
