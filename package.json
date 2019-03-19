@@ -26,7 +26,7 @@
 	"bugs": {
 		"email": "luis.silva@mediagranja.com"
 	},
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"engines": {
 		"vscode": "^1.32.0"
 	},
@@ -34,36 +34,39 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:jsxPropsNavigation.moveRight",
-		"onCommand:jsxPropsNavigation.addRight",
-		"onCommand:jsxPropsNavigation.moveLeft",
-		"onCommand:jsxPropsNavigation.addLeft"
+		"*"
 	],
 	"main": "./extension.js",
 	"contributes": {
+		"commands":[
+			{"command": "jsxPropsNavigation.moveRight", "title": "Move cursor to next prop/attribute"},
+			{"command": "jsxPropsNavigation.addRight", "title": "Add cursor to next prop/attribute"},
+			{"command": "jsxPropsNavigation.moveLeft", "title": "Move cursor to previous prop/attribute"},
+			{"command": "jsxPropsNavigation.addLeft", "title": "Add cursor to previous prop/attribute"}
+		],
 		"keybindings": [
 			{
 				"command": "jsxPropsNavigation.moveRight",
-				"key": "alt+win+]",
-				"mac": "alt+cmd+]",
+				"key": "Alt+Win+]",
+				"mac": "Alt+Cmd+]",
 				"when": "editorTextFocus"
 			},
 			{
 				"command": "jsxPropsNavigation.addRight",
-				"key": "ctrl+alt+win+]",
-				"mac": "ctrl+alt+cmd+]",
+				"key": "Ctrl+Alt+Win+]",
+				"mac": "Ctrl+Alt+Cmd+]",
 				"when": "editorTextFocus"
 			},
 			{
 				"command": "jsxPropsNavigation.moveLeft",
-				"key": "alt+win+[",
-				"mac": "alt+cmd+[",
+				"key": "Alt+Win+[",
+				"mac": "Alt+Cmd+[",
 				"when": "editorTextFocus"
 			},
 			{
 				"command": "jsxPropsNavigation.addLeft",
-				"key": "ctrl+alt+win+[",
-				"mac": "ctrl+alt+cmd+[",
+				"key": "Ctrl+Alt+Win+[",
+				"mac": "Ctrl+Alt+Cmd+[",
 				"when": "editorTextFocus"
 			}
 		]
